@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "ConnKeeper",
+    "slug": "connkeeperapp",
+    "version": "1.0.1",
+    "icon": "./assets/icon.png",
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "ConnKeeper needs your location to share it with your family members and track safe zones.",
+          "locationWhenInUsePermission": "ConnKeeper needs your location to share it with your family members.",
+          "locationAlwaysPermission": "Allow ConnKeeper to use your location in the background.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#ffffff"
+        }
+      ],
+      "expo-tracking-transparency"
+    ],
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "orientation": "portrait",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "android": {
+      "package": "com.shareekdigitalapp.connkeeper",
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "NOTIFICATIONS"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shareekdigitalapp.connkeeper",
+      "buildNumber": "5",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch",
+          "remote-notification"
+        ],
+        "NSLocationUsageDescription": "ConnKeeper needs your location to share it with your family members.",
+        "NSLocationWhenInUseUsageDescription": "ConnKeeper needs your location to share it with your family members.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "ConnKeeper needs background location access to keep sharing your location with family members.",
+        "NSLocationAlwaysUsageDescription": "ConnKeeper needs background location access to keep sharing your location with family members.",
+        "NSUserTrackingUsageDescription": "We use your data to provide personalized location tracking services and to improve your experience with ConnKeeper. This includes sending notifications when members enter or leave designated zones."
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e453983b-a938-48c3-9eb1-883e7e82375d"
+      }
+    },
+    "owner": "aakeldev"
+  }
+}
